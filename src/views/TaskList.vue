@@ -1,66 +1,81 @@
 <template>
     <div class="container mt-4">
-        <!-- Título con diseño consistente -->
-        <h1 class="text-center text-primary mb-4 title">Lista de Tareas</h1>
-
-        <!-- Botón para cargar tareas desde la API -->
-        <button @click="fetchTasks" class="btn btn-info mb-3">
-            <i class="bi bi-arrow-clockwise me-2"></i>Cargar Tareas
-        </button>
-
-        <div class="row">
-            <div class="col-12 mb-4" v-for="task in tasks" :key="task.id">
-                <TodoItem :title="task.todo" :completed="task.completed" @toggle-completion="toggleTaskCompletion(task)"
-                    @delTodo="deleteTask(task)" />
-            </div>
+        <h1><span style="color: orange">Parte de Conocernos</span></h1>
+        <div class="container mt-5">
+            <p class="lead text-secondary mb-4">
+                    Desde aquel 17 de agosto, como te dije en varias oportunidades, me dejaste impresionado, 
+                nunca antes había visto una chica tan linda e inteligente, conocerte ahí para mí fué algo genial,
+                por eso desde un principio lo único que quería era una forma de contactarte después de la competencia,
+                gracias a que me hablaste y después tuve el valor de pedirte la foto es que cumplí ese propósito  y hoy 
+                te convertiste una persona sumamente importante para mí.
+            </p>
+            <img src="@/assets/compe.png" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/compe3.png" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/compe5.png" class="imagen" alt="Vue logo" />
+            <img src="@/assets/compe6.png" class="imagenx" alt="Vue logo" />
         </div>
     </div>
 </template>
 
-<script>
-import TodoItem from "@/components/TodoItem.vue";
-import axios from "axios";
-
-export default {
-    name: "TaskList",
-    components: { TodoItem },
-    data() {
-        return {
-            tasks: [],
-        };
-    },
-    methods: {
-        fetchTasks() {
-            axios
-                .get("https://dummyjson.com/todos")
-                .then((response) => {
-                    this.tasks = response.data.todos; 
-                })
-                .catch((error) => {
-                    console.error("Error fetching tasks:", error);
-                });
-        },
-        toggleTaskCompletion(task) {
-            task.completed = !task.completed; 
-        },
-        deleteTask(task) {
-            this.tasks = this.tasks.filter((t) => t.id !== task.id);
-        },
-    },
-};
-</script>
-
 <style scoped>
+.container .imagenx{
+    padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 200px;
+}
 .container {
     max-width: 800px;
     padding: 20px;
+    text-align: center;
 }
-.title {
+
+h1 {
     font-size: 50px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    margin-bottom: 30px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 3);
+    text-align: center;
+}
 
+.task-input {
+    border-radius: 25px;
+    transition: border-color 0.2s;
+}
+
+.task-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(63, 218, 42, 0.5)
+}
+
+.card-title {
+    font-weight: bold;
+    overflow-wrap: break-word;
+    max-height: 3em;
+    overflow: hidden;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+.logo {
+  padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 400px;
+}
+
+.imagen {
+    padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 200px;
 }
 </style>

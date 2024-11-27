@@ -1,104 +1,52 @@
 <template>
     <div class="container mt-4">
-        <!-- Título centralizado -->
-        <h1 class="text-center text-primary mb-4">Lista de Tareas</h1>
-
-        <!-- Input para añadir nuevas tareas -->
-        <div class="input-group mb-3">
-            <input v-model="newTask" @keyup.enter="addTask" placeholder="Añadir nueva tarea"
-                class="form-control task-input" aria-label="Nueva tarea" />
-            <button @click="addTask" class="btn btn-primary">Añadir</button>
-        </div>
-
-        <!-- Mostrar las tareas obtenidas de la API automáticamente -->
-        <div class="row mt-4">
-            <div class="col-12 mb-4" v-for="task in tasks" :key="task.id">
-                <div class="card mb-3">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                        <div class="flex-grow-1 me-2">
-                            <h5 class="card-title m-0" :class="{ 'text-decoration-line-through': task.completed }">
-                                {{ task.todo }}
-                            </h5>
-                            <span class="badge"
-                                :class="{ 'bg-success': task.completed, 'bg-warning': !task.completed }">
-                                {{ task.completed ? 'Completada' : 'Pendiente' }}
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <button @click="toggleTaskCompletion(task)" class="btn btn-outline-success me-2"
-                                aria-label="Marcar como completada">
-                                <i :class="task.completed ? 'bi bi-check-circle-fill' : 'bi bi-check-circle'"></i>
-                            </button>
-                            <button @click="deleteTask(task)" class="btn btn-outline-danger"
-                                aria-label="Eliminar tarea">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h1><span style="color: green">Ser Compañeros</span></h1>
+        <div class="container mt-5">
+            <p class="lead text-secondary mb-4">
+                    Llegaba el momento de decidirme si ir a Asunción o quedarme por acá, pero no sabía 
+                por cual decidirme; después de ver cual iba a ser mi vida si me iba, me dí cuenta que
+                no iba a conocer una persona tan genial como vos y ahí sin dudar ya decidí quedarme,
+                luego el primer día sin siquiera avisarte me fuí para darte una sorpresa y la verdad que
+                la sorpresa me llevé yo cuando me ignoraste o hiciste que no me viste, mmm JAJJAJAJJAJAJAJA
+                es una broma, realmente me sentí muy bien desde ese día porque tuve todo tu cariño y fuiste
+                muy genial conmigo, desde ese entonces nunca más me arrepentí de haberme quedado para conocerte 
+                más y convivir contigo.
+            </p>
+            <img src="@/assets/imagen9.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen4.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen13.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen15.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen6.jpg" class="imagen" alt="Vue logo" />
+            <img src="@/assets/imagen19.jpg" class="imagen" alt="Vue logo" />
+            <img src="@/assets/imagen12.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen11.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen14.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen20.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
         </div>
     </div>
 </template>
 
-<script>
-import axios from 'axios';
-
-export default {
-    name: "CombinedView",
-    data() {
-        return {
-            newTask: "", 
-            tasks: [], 
-        };
-    },
-    created() {
-        this.fetchTasks();
-    },
-    methods: {
-        fetchTasks() {
-            // Obtener las tareas de la API
-            axios.get("https://dummyjson.com/todos")
-                .then((response) => {
-                    this.tasks = response.data.todos; 
-                })
-                .catch((error) => {
-                    console.error("Error fetching tasks:", error);
-                });
-        },
-        addTask() {
-            if (this.newTask.trim() === "") return;
-
-            const newTask = {
-                todo: this.newTask,
-                completed: false,
-                id: Date.now(), 
-            };
-
-            this.tasks.unshift(newTask);
-            this.newTask = ""; 
-        },
-        toggleTaskCompletion(task) {
-            task.completed = !task.completed;
-        },
-        deleteTask(task) {
-            this.tasks = this.tasks.filter((t) => t.id !== task.id);
-        },
-    },
-};
-</script>
-
 <style scoped>
+.container .imagenx{
+    padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 300px;
+}
 .container {
     max-width: 800px;
     padding: 20px;
+    text-align: center;
 }
 
 h1 {
     font-size: 50px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 3px rgba(250, 16, 16, 3);
+    text-align: center;
 }
 
 .task-input {
@@ -108,7 +56,7 @@ h1 {
 
 .task-input:focus {
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 5px rgba(63, 218, 42, 0.5)
 }
 
 .card-title {
@@ -120,5 +68,23 @@ h1 {
 
 .text-decoration-line-through {
     text-decoration: line-through;
+}
+
+.logo {
+  padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 400px;
+}
+
+.imagen {
+    padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 200px;
 }
 </style>

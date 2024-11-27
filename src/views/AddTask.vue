@@ -1,90 +1,59 @@
 <template>
     <div class="container mt-4">
-        <h1 class="text-center text-success mb-4">Añadir Tarea</h1>
-        <div class="input-group mb-3">
-            <input v-model="newTask" @keyup.enter="addTask" placeholder="Añadir nueva tarea"
-                class="form-control task-input" aria-label="Nueva tarea" />
-            <button @click="addTask" class="btn btn-primary">Añadir</button>
-        </div>
-
-        <!-- Nueva Sección: Mostrar tareas añadidas -->
-        <div class="row mt-4" v-if="tasks.length > 0">
-            <div class="col-12 mb-4" v-for="task in tasks" :key="task.id">
-                <div class="card mb-3">
-                    <div class="card-body d-flex justify-content-between align-items-center">
-                        <div class="flex-grow-1 me-2">
-                            <h5 class="card-title m-0" :class="{ 'text-decoration-line-through': task.completed }">
-                                {{ task.todo }}
-                            </h5>
-                            <span class="badge"
-                                :class="{ 'bg-success': task.completed, 'bg-warning': !task.completed }">
-                                {{ task.completed ? 'Completada' : 'Pendiente' }}
-                            </span>
-                        </div>
-                        <div class="d-flex">
-                            <button @click="toggleTaskCompletion(task)" class="btn btn-outline-success me-2"
-                                aria-label="Marcar como completada">
-                                <i :class="task.completed ? 'bi bi-check-circle-fill' : 'bi bi-check-circle'"></i>
-                            </button>
-                            <button @click="deleteTask(task)" class="btn btn-outline-danger"
-                                aria-label="Eliminar tarea">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <h1><span style="color: blue">¡¡Feliz 20 años!!</span></h1>
+        <div class="container mt-5">
+            <p class="lead text-secondary mb-4">
+                    Claudia Monserrat Valdez Torres, quiero desearte un muy feliz cumpleaños, sos una persona
+                increiblemente genial, como siempre te digo, te mereces todo lo mejor del mundo, sos una chica
+                que siempre demuestra su sencillez, su ternura y su buena onda; realmente compartir momentos
+                contigo, es algo muy lindo, porque alegras el ambiente con tu buena vibra, siempre tenes algo nuevo
+                para contar, siempre tenes con que entretener y por eso todo el mundo siempre se rodea de vos.
+                    De corazón espero que pases súper bien y que esta nueva etapa en tu vida, venga acompañado
+                de muchas alegrías y seas felíz eternamente, te deseo lo mejor siempre y nunca dudes de que voy
+                a estar ahí en las buenas y en las malas, porque te mereces.
+            </p>
+            <img src="@/assets/imagen17.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen22.png" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen25.png" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen8.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen24.png" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen26.png" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen21.png" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen2.png" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen23.png" class="imagen" alt="Vue logo" />
+            <img src="@/assets/imagen18.jpg" class="imagen" alt="Vue logo" />
+            <img src="@/assets/imagen16.jpg" class="imagen" alt="Vue logo" />
+            
         </div>
     </div>
 </template>
 
-<script>
-export default {
-    name: "AddTask",
-    data() {
-        return {
-            newTask: "", // Tarea nueva ingresada en el input
-            tasks: [], // Arreglo local de tareas
-        };
-    },
-    methods: {
-        addTask() {
-            if (this.newTask.trim() === "") return;
-
-            // Crear una nueva tarea
-            const newTask = {
-                todo: this.newTask,
-                completed: false,
-                id: Date.now(), // Generar un ID único
-            };
-
-            this.tasks.unshift(newTask); // Añadir a la lista local
-            this.newTask = ""; // Limpiar el input
-        },
-        deleteTask(task) {
-            // Filtrar la tarea a eliminar
-            this.tasks = this.tasks.filter((t) => t.id !== task.id);
-        },
-        toggleTaskCompletion(task) {
-            // Alternar el estado de la tarea entre completada y no completada
-            task.completed = !task.completed;
-        },
-    },
-};
-</script>
-
 <style scoped>
+.container .imagenx{
+    padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 400px;
+}
 .container {
     max-width: 800px;
     padding: 20px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h1 {
     font-size: 50px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-
+    text-shadow: 2px 2px 3px rgba(253, 26, 26, 3);
+    text-align: center;
 }
 
 .task-input {
@@ -106,5 +75,23 @@ h1 {
 
 .text-decoration-line-through {
     text-decoration: line-through;
+}
+
+.logo {
+  padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 400px;
+}
+
+.imagen {
+    padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 300px; 
+  height: 200px;
 }
 </style>
