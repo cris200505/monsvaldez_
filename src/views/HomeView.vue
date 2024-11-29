@@ -6,7 +6,7 @@
       <p class="lead text-secondary mb-4">
         ¡¡FELIZ CUMPLEAÑOS A LA CHICA MÁS GENIAL DE ESTE MUNDO!!
       </p>
-      <img src="@/assets/imagen.png" class="img-fluid mb-4 logo" alt="Vue logo" />
+      <img src="@/assets/imagen34.png" class="img-fluid mb-4 logo" alt="Vue logo" />
     </div>
   </div>
 </template>

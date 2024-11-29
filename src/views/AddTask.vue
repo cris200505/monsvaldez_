@@ -12,18 +12,36 @@
                 de muchas alegrías y seas felíz eternamente, te deseo lo mejor siempre y nunca dudes de que voy
                 a estar ahí en las buenas y en las malas, porque te mereces.
             </p>
+            <img src="@/assets/imagen.png" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen17.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen38.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen39.jpg" class="imagenx" alt="Vue logo" />
             <img src="@/assets/imagen22.png" class="img-fluid mb-4 logo" alt="Vue logo" />
-            <img src="@/assets/imagen25.png" class="img-fluid mb-4 logo" alt="Vue logo" />
-            <img src="@/assets/imagen8.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
-            <img src="@/assets/imagen24.png" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen30.png" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen26.png" class="imagenx" alt="Vue logo" />
             <img src="@/assets/imagen21.png" class="imagenx" alt="Vue logo" />
             <img src="@/assets/imagen2.png" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen24.png" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen29.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen40.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen23.png" class="imagen" alt="Vue logo" />
             <img src="@/assets/imagen18.jpg" class="imagen" alt="Vue logo" />
+            <img src="@/assets/imagen8.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen37.png" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen43.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen44.jpg" class="imagenx" alt="Vue logo" /> 
+            <img src="@/assets/imagen45.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen46.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen41.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen42.jpg" class="imagenx" alt="Vue logo" /> 
+            <img src="@/assets/imagen36.png" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen25.png" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen48.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen49.jpg" class="imagenx" alt="Vue logo" /> 
             <img src="@/assets/imagen16.jpg" class="imagen" alt="Vue logo" />
-            
+            <img src="@/assets/imagen32.png" class="imageni" alt="Vue logo" />
+            <img src="@/assets/imagen33.png" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen31.png" class="imagenx" alt="Vue logo" />
         </div>
     </div>
 </template>
@@ -36,6 +54,7 @@
   transition: transform 0.3s, box-shadow 0.3s;
   width: 300px; 
   height: 400px;
+  display: flexbox;
 }
 .container {
     max-width: 800px;
@@ -83,7 +102,8 @@ h1 {
   box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
   width: 300px; 
-  height: 400px;
+  height: 400px;  
+  display: flexbox;
 }
 
 .imagen {
@@ -93,5 +113,15 @@ h1 {
   transition: transform 0.3s, box-shadow 0.3s;
   width: 300px; 
   height: 200px;
+  display: flexbox;
+}
+.imageni {
+    padding: 4px;
+  border-radius: 40px;
+  box-shadow: 0 0 5px rgba(200, 243, 81, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 280px; 
+  height: 200px;
+  display: flexbox;
 }
 </style>

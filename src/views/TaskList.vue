@@ -1,6 +1,6 @@
 <template>
     <div class="container mt-4">
-        <h1><span style="color: orange">Parte de Conocernos</span></h1>
+        <h1><span style="color: orange">Me regalas una foto?</span></h1>
         <div class="container mt-5">
             <p class="lead text-secondary mb-4">
                     Desde aquel 17 de agosto, como te dije en varias oportunidades, me dejaste impresionado, 

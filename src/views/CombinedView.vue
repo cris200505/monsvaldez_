@@ -1,12 +1,13 @@
 <template>
     <div class="container mt-4">
-        <h1><span style="color: green">Ser Compañeros</span></h1>
+        <h1><span style="color: green">Chaa, allá está Monse</span></h1>
         <div class="container mt-5">
             <p class="lead text-secondary mb-4">
                     Llegaba el momento de decidirme si ir a Asunción o quedarme por acá, pero no sabía 
                 por cual decidirme; después de ver cual iba a ser mi vida si me iba, me dí cuenta que
                 no iba a conocer una persona tan genial como vos y ahí sin dudar ya decidí quedarme,
-                luego el primer día sin siquiera avisarte me fuí para darte una sorpresa y la verdad que
+                luego aquel 6 de febrero, sin siquiera avisarte, (al llegar y entrar, te ví a lo lejos y
+                dije "Chaa, allá está Monse" jajajaja) me fuí para darte una sorpresa y la verdad que
                 la sorpresa me llevé yo cuando me ignoraste o hiciste que no me viste, mmm JAJJAJAJJAJAJAJA
                 es una broma, realmente me sentí muy bien desde ese día porque tuve todo tu cariño y fuiste
                 muy genial conmigo, desde ese entonces nunca más me arrepentí de haberme quedado para conocerte 
@@ -15,13 +16,15 @@
             <img src="@/assets/imagen9.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen4.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen13.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
-            <img src="@/assets/imagen15.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen27.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen6.jpg" class="imagen" alt="Vue logo" />
             <img src="@/assets/imagen19.jpg" class="imagen" alt="Vue logo" />
             <img src="@/assets/imagen12.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen11.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen14.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen20.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen15.jpg" class="imagenx" alt="Vue logo" />
+            <img src="@/assets/imagen28.jpg" class="imagen" alt="Vue logo" />
         </div>
     </div>
 </template>
@@ -86,5 +89,6 @@ h1 {
   transition: transform 0.3s, box-shadow 0.3s;
   width: 300px; 
   height: 200px;
+  text-align: center;
 }
 </style>
