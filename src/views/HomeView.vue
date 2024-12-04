@@ -11,7 +11,8 @@
           ~Pd: Espero y me disculpes por el contenido de la página jajajaja. Feliz 20 años 
         pesadita, dándole clic a cualquiera de los escudos (Tu querido Cerro Porteño (ndovalei kaka)
         , la gloriosa Selección Roquegonzaleña (nuestra compañía más grande) o el gran Deportivo 
-        Roque Gonzalez (pea si ñande club)) vas a poder vizualizar este pequeño detalle que te hice.
+        Roque Gonzalez (pea si ñande club)) vas a poder vizualizar este pequeño detalle que te hice 
+        (espero y no veas en donde dice "No ver", mm jajajaja).
       </p>
     </div>
   </div>

@@ -29,7 +29,7 @@
             <img src="@/assets/imagen8.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen50.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <p class="lead text-secondary mb-4">
-                    Perdón por estas fotos, pero creí justo y necesario para este momento😂.
+                Perdón por las siguientes fotos, pero creí justo y necesario para este momento😂.
             </p>
             <img src="@/assets/imagen37.png" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen43.jpg" class="imagenx" alt="Vue logo" />
@@ -46,6 +46,17 @@
             <img src="@/assets/imagen16.jpg" class="imagen" alt="Vue logo" />
             <img src="@/assets/imagen32.png" class="imageni" alt="Vue logo" />
             <img src="@/assets/imagen31.png" class="imagenx" alt="Vue logo" />
+
+            <ul class="navbar-nav ms-auto">         
+            <li class="boton">
+              <router-link class="boton1" to="/">
+                <i></i>‹‹ Anterior
+              </router-link>
+              <router-link class="boton2" to="/tasklist">
+                <i></i>Siguiente ››
+              </router-link>
+            </li>
+          </ul>
         </div>
     </div>
 </template>
@@ -127,5 +138,27 @@ h1 {
   width: 280px; 
   height: 200px;
   display: flexbox;
+}
+
+.boton-container {
+  text-align: center;
+    gap: 10px; 
+}
+
+.boton {    
+  display: inline-block ;
+  margin: 5px;
+  padding: 10px 20px;
+  color: white;
+  border:rgb(2, 0, 0);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.boton1{
+    margin: 30px;
+}
+
+.boton2{
+    margin: 30px;
 }
 </style>

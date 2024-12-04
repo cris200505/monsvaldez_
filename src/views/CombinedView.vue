@@ -22,9 +22,21 @@
             <img src="@/assets/imagen12.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen11.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen14.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
+            <img src="@/assets/imagen51.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen20.jpg" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/imagen15.jpg" class="imagenx" alt="Vue logo" />
             <img src="@/assets/imagen28.jpg" class="imagen" alt="Vue logo" />
+
+            <ul class="navbar-nav ms-auto">         
+            <li class="boton">
+              <router-link class="boton1" to="/tasklist">
+                <i></i>‹‹ Anterior
+              </router-link>
+              <router-link class="boton2" to="/about">
+                <i></i>Siguiente ››
+              </router-link>
+            </li>
+          </ul>
         </div>
     </div>
 </template>
@@ -90,5 +102,27 @@ h1 {
   width: 300px; 
   height: 200px;
   text-align: center;
+}
+
+.boton-container {
+  text-align: center;
+    gap: 10px; 
+}
+
+.boton {    
+  display: inline-block ;
+  margin: 5px;
+  padding: 10px 20px;
+  color: white;
+  border:rgb(2, 0, 0);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.boton1{
+    margin: 30px;
+}
+
+.boton2{
+    margin: 30px;
 }
 </style>

@@ -7,12 +7,23 @@
                 nunca antes había visto una chica tan linda e inteligente, conocerte ahí para mí fué algo genial,
                 por eso desde un principio lo único que quería era una forma de contactarte después de la competencia,
                 gracias a que me hablaste y después tuve el valor de pedirte la foto es que cumplí ese propósito  y hoy 
-                te convertiste una persona sumamente importante para mí.
+                te convertiste en una persona sumamente importante para mí.
             </p>
             <img src="@/assets/compe.png" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/compe3.png" class="img-fluid mb-4 logo" alt="Vue logo" />
             <img src="@/assets/compe5.png" class="imagen" alt="Vue logo" />
             <img src="@/assets/compe6.png" class="imagenx" alt="Vue logo" />
+
+            <ul class="navbar-nav ms-auto">         
+            <li class="boton">
+              <router-link class="boton1" to="/addtask">
+                <i></i>‹‹ Anterior
+              </router-link>
+              <router-link class="boton2" to="/combined">
+                <i></i>Siguiente ››
+              </router-link>
+            </li>
+          </ul>
         </div>
     </div>
 </template>
@@ -77,5 +88,27 @@ h1 {
   transition: transform 0.3s, box-shadow 0.3s;
   width: 300px; 
   height: 200px;
+}
+
+.boton-container {
+  text-align: center;
+    gap: 10px; 
+}
+
+.boton {    
+  display: inline-block ;
+  margin: 5px;
+  padding: 10px 20px;
+  color: white;
+  border:rgb(2, 0, 0);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.boton1{
+    margin: 30px;
+}
+
+.boton2{
+    margin: 30px;
 }
 </style>
